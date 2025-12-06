@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>QUICK BITE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="#" class="brand">
+      <svg class="logo" width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2" y="2" width="60" height="60" rx="16" fill="#FF2B85"/>
+        <circle cx="24" cy="24" r="6" fill="white"/>
+        <circle cx="40" cy="24" r="6" fill="white"/>
+        <path d="M20 40c4 4 20 4 24 0" stroke="white" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <span>QUICK BITE</span>
+    </a>
+    <nav class="links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#restaurants">Restaurants</a>
+      <a href="#contact">Contact</a>
+      <a href="#careers">Careers</a>
+    </nav>
+    <div class="actions">
+      <button id="chooseLocation">Choose location</button>
+      <button id="openSearch" class="icon-btn" aria-label="Search">
+        <span class="material">search</span>
+      </button>
+      <button id="openCart" class="icon-btn cart-btn" aria-label="Cart">
+        <span class="material">shopping_cart</span>
+        <span id="cartCount" class="badge">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <video class="hero-bg" autoplay muted loop playsinline>
+    <source src="https://cdn.coverr.co/videos/coverr-serving-food-3512/1080p.mp4" type="video/mp4">
+  </video>
+  <div class="container hero-content">
+    <h1><span>food</span><br/>and groceries<br/>in a tap</h1>
+    <p>We help you live life the panda way. More flavor, less hassle. Fresh meals, groceries and new favourites delivered fast.</p>
+    <form id="searchForm" class="searchbar">
+      <input type="text" id="searchInput" placeholder="Search dishes, restaurants, cuisines" />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</section>
+
+<section class="container promo">
+  <div class="promo-card">
+    <h3>Free Delivery</h3>
+    <p>Unlock free delivery on orders over Rs. 1200.</p>
+  </div>
+  <div class="promo-card">
+    <h3>New Onboard</h3>
+    <p>Discover fresh brands added this week.</p>
+  </div>
+  <div class="promo-card">
+    <h3>Groceries</h3>
+    <p>Get essentials in minutes with express.</p>
+  </div>
+</section>
+
+<section id="restaurants" class="container products">
+  <div class="section-head">
+    <h2>Popular near you</h2>
+    <div class="filters">
+      <button class="pill active" data-filter="all">All</button>
+      <button class="pill" data-filter="burger">Burger</button>
+      <button class="pill" data-filter="pizza">Pizza</button>
+      <button class="pill" data-filter="biryani">Biryani</button>
+      <button class="pill" data-filter="drinks">Drinks</button>
+    </div>
+  </div>
+
+  <div id="cardGrid" class="grid">
+    <article class="card" data-type="burger" data-name="Classic Burger" data-price="350">
+      <img src="assessts/3.jpeg" alt="Classic Burger">
+      <div class="card-body">
+        <h3>Classic Burger</h3>
+        <p>Juicy patty, fresh veggies, signature sauce.</p>
+        <div class="meta">
+          <span class="rating">★ 4.6</span>
+          <span class="time">25 min</span>
+          <span class="price">Rs. 350</span>
+        </div>
+        <button class="add">Add to Cart</button>
+      </div>
+    </article>
+
+    <article class="card" data-type="pizza" data-name="Pepperoni Pizza" data-price="1190">
+      <img src="./assessts/1.jpeg" alt="Pepperoni Pizza">
+      <div class="card-body">
+        <h3>Pepperoni Pizza</h3>
+        <p>Cheesy, crispy and loaded with pepperoni.</p>
+        <div class="meta">
+          <span class="rating">★ 4.8</span>
+          <span class="time">30 min</span>
+          <span class="price">Rs. 1190</span>
+        </div>
+        <button class="add">Add to Cart</button>
+      </div>
+    </article>
+
+    <article class="card" data-type="biryani" data-name="Chicken Biryani" data-price="490">
+      <img src="assessts/2.jpeg" alt="Chicken Biryani">
+      <div class="card-body">
+        <h3>Chicken Biryani</h3>
+        <p>Fragrant basmati rice with tender chicken.</p>
+        <div class="meta">
+          <span class="rating">★ 4.7</span>
+          <span class="time">35 min</span>
+          <span class="price">Rs. 490</span>
+        </div>
+        <button class="add">Add to Cart</button>
+      </div>
+    </article>
+
+    <article class="card" data-type="drinks" data-name="Iced Coffee" data-price="260">
+      <img src="assessts/4.jpeg" alt="Iced Coffee">
+      <div class="card-body">
+        <h3>Iced Coffee</h3>
+        <p>Cold, bold and perfectly sweetened.</p>
+        <div class="meta">
+          <span class="rating">★ 4.4</span>
+          <span class="time">15 min</span>
+          <span class="price">Rs. 260</span>
+        </div>
+        <button class="add">Add to Cart</button>
+      </div>
+    </article>
+
+    <article class="card" data-type="burger" data-name="Double Stack Burger" data-price="580">
+      <img src="assessts/5.jpeg" alt="Double Stack Burger">
+      <div class="card-body">
+        <h3>Double Stack Burger</h3>
+        <p>Two patties, melty cheese, secret relish.</p>
+        <div class="meta">
+          <span class="rating">★ 4.5</span>
+          <span class="time">28 min</span>
+          <span class="price">Rs. 580</span>
+        </div>
+        <button class="add">Add to Cart</button>
+      </div>
+    </article>
+
+    <article class="card" data-type="pizza" data-name="Margherita Pizza" data-price="990">
+      <img src="assessts/6.jpeg" alt="Margherita Pizza">
+      <div class="card-body">
+        <h3>Margherita Pizza</h3>
+        <p>Tomato, mozzarella and basil perfection.</p>
+        <div class="meta">
+          <span class="rating">★ 4.6</span>
+          <span class="time">27 min</span>
+          <span class="price">Rs. 990</span>
+        </div>
+        <button class="add">Add to Cart</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="rider">
+  <div class="container rider-inner">
+    <div class="rider-img">
+      <img src="assessts/8.png" alt="Delivery Rider">
+    </div>
+    <div class="rider-copy">
+      <h2>Riders on the move</h2>
+      <p>From your favourite restaurants to your doorstep in no time. Our riders are trained for safety, speed and smiles.</p>
+      <ul class="ticks">
+        <li>Realtime tracking</li>
+        <li>Contactless delivery</li>
+        <li>Peak-hour priority</li>
+      </ul>
+      <a href="#careers" class="cta">Join as a rider</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="container about">
+  <div class="about-card">
+    <h3>About QUICK BITE</h3>
+    <p>Born to deliver delight. We connect people to the restaurants and stores they love using thoughtful design and fast technology.</p>
+  </div>
+  <div class="about-card">
+    <h3>For Partners</h3>
+    <p>Grow your sales with marketing tools, insights and a logistics network made to scale.</p>
+  </div>
+  <div class="about-card">
+    <h3>panda ads</h3>
+    <p>Boost visibility and get featured across key app and web surfaces with performance ads.</p>
+  </div>
+</section>
+
+<section class="download">
+  <div class="container dl-inner">
+    <div class="dl-copy">
+      <h2>Get the app</h2>
+      <p>Everything you crave, right in your pocket. Track orders, re-order favourites and discover new tastes.</p>
+      <div class="stores">
+        <a href="#" class="store">App Store</a>
+        <a href="#" class="store">Google Play</a>
+      </div>
+    </div>
+    <div class="dl-shot">
+      <img src="https://images.unsplash.com/photo-1587560699334-cc4ff634909a?q=80&w=1200&auto=format&fit=crop" alt="App Preview">
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="container contact">
+  <h2>Contact</h2>
+  <form id="contactForm" class="contact-form">
+    <input type="text" id="cName" placeholder="Your name" required>
+    <input type="email" id="cEmail" placeholder="Email address" required>
+    <textarea id="cMsg" rows="4" placeholder="Your message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <div class="container foot-grid">
+    <div class="foot-brand">
+      <div class="brand brand-invert">
+        <svg class="logo" width="36" height="36" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="60" height="60" rx="16" fill="white"/>
+          <circle cx="24" cy="24" r="6" fill="#FF2B85"/>
+          <circle cx="40" cy="24" r="6" fill="#FF2B85"/>
+          <path d="M20 40c4 4 20 4 24 0" stroke="#FF2B85" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span>QUICK BITE</span>
+      </div>
+      <p>Delivering smiles, one bite at a time.</p>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><span class="material">facebook</span></a>
+        <a href="#" aria-label="Instagram"><span class="material">camera_alt</span></a>
+        <a href="#" aria-label="Twitter"><span class="material">chat</span></a>
+        <a href="#" aria-label="YouTube"><span class="material">smart_display</span></a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h4>Company</h4>
+      <a href="#">About</a>
+      <a href="#">Newsroom</a>
+      <a href="#">Investors</a>
+      <a href="#">Careers</a>
+      <a href="#">Sustainability</a>
+    </div>
+    <div class="foot-col">
+      <h4>For Customers</h4>
+      <a href="#">Help Center</a>
+      <a href="#">COVID-19 Updates</a>
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Accessibility</a>
+    </div>
+    <div class="foot-col">
+      <h4>For Partners</h4>
+      <a href="#">Become a Partner</a>
+      <a href="#">Logistics</a>
+      <a href="#">Brand Guidelines</a>
+      <a href="#">panda ads</a>
+      <a href="#">API</a>
+    </div>
+    <div class="foot-col">
+      <h4>Newsletter</h4>
+      <form id="newsForm" class="news">
+        <input type="email" id="newsEmail" placeholder="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="tiny">By subscribing, you agree to receive marketing emails.</p>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    <p>2025 QUICK BITE. All rights reserved.</p>
+    <div class="langs">
+      <a href="#" class="pill sm active">English</a>
+      <a href="#" class="pill sm">اردو</a>
+    </div>
+  </div>
+</footer>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="script.js"></script>
+</body>
+</html>
